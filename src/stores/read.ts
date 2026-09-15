@@ -9,6 +9,7 @@ export const useReadStore = defineStore('read', {
       minute: undefined,
     },
     textColor: 'text-white' as 'text-black' | 'text-white',
+    orientation: 'horizontal' as 'horizontal' | 'vertical',
   }),
   getters: {
     totalMinutes: (state): number => {
