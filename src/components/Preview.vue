@@ -24,7 +24,10 @@ const colorClass = computed(() => store.textColor)
         <p>Pace</p>
         <p class="text-2xl font-semibold">{{ store.pace }} / page</p>
       </section>
-      <UIcon name="i-lucide-book-open" class="size-15 text-primary text-center" />
+      <div class="flex flex-col mx-auto items-center gap-y-2">
+        <UIcon name="i-lucide-book-open" class="size-15 text-primary text-center" />
+        <p class="font-semibold" v-if="store.title">{{ store.title }}</p>
+      </div>
     </div>
 
     <template #footer>
