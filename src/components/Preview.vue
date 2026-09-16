@@ -10,7 +10,7 @@ const previewRef = ref<HTMLElement | null>(null)
 </script>
 
 <template>
-  <UCard title="Preview">
+  <UCard title="Preview" :ui="{root: 'min-w-full md:min-w-0'}">
     <div
       v-if="store.orientation === 'horizontal'"
       ref="previewRef"
