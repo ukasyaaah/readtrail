@@ -13,7 +13,7 @@ export default defineConfig({
           secondary: 'fuchsia',
           neutral: 'neutral',
         },
-
+       
         button: {
           defaultVariants: {
             variant: 'outline',
