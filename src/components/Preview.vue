@@ -36,7 +36,7 @@ const previewRef = ref<HTMLElement | null>(null)
         <p class="font-semibold wrap-anywhere text-center" v-if="store.title">{{ store.title }}</p>
       </div>
     </div>
-    <div v-else ref="previewRef" :class="['flex justify-center sm:gap-x-3 md:gap-x-7 flex-row-reverse', colorClass]">
+    <div v-else ref="previewRef" :class="['flex justify-center items-center sm:gap-x-3 md:gap-x-7 flex-row-reverse', colorClass]">
       <div class="space-y-6 p-7">
         <section class="text-center">
           <p>Distance</p>
