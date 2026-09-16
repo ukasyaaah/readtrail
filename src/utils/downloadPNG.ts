@@ -1,14 +1,15 @@
 import { useReadStore } from '@/stores/read'
 import { toPng } from 'html-to-image'
 
-const store = useReadStore()
-const toast = useToast()
-
 export async function downloadPNG(
   element: HTMLElement | null,
   fileName = 'read-trail-stat.png',
   pixelRatio = 2,
 ) {
+  const store = useReadStore()
+  const toast = useToast()
+
+  
   if (!element) {
     return
   }
