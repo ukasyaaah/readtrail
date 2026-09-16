@@ -80,7 +80,7 @@ const orientationItems = ref<RadioGroupItem[]>([
 
           <USeparator class="my-5" />
 
-          <div class="flex gap-x-8">
+          <div class="flex flex-wrap gap-x-8">
             <URadioGroup
               legend="Text Color"
               variant="table"
