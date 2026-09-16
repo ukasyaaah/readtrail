@@ -9,7 +9,6 @@ export async function downloadPNG(
   const store = useReadStore()
   const toast = useToast()
 
-  
   if (!element) {
     return
   }
@@ -18,6 +17,16 @@ export async function downloadPNG(
     toast.add({
       title: 'Pages read is required',
       description: "Please enter the number of pages you've read",
+      icon: 'i-lucide-circle-alert',
+      color: 'error',
+    })
+    return
+  }
+
+  if (!store.time.hour && !store.time.minute) {
+    toast.add({
+      title: 'Reading time is required',
+      description: 'Please enter the hours or minutes you spent reading',
       icon: 'i-lucide-circle-alert',
       color: 'error',
     })
