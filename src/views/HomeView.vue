@@ -25,13 +25,13 @@ const orientationItems = ref<RadioGroupItem[]>([
   {
     label: 'Horizontal',
     icon: 'i-lucide-gap-horizontal',
-    value: 'white',
+    value: 'horizontal',
     class: 'w-20',
   },
   {
     label: 'Vertical',
     icon: 'i-lucide-gap-vertical',
-    value: 'black',
+    value: 'vertical',
     class: 'w-20',
   },
 ])
@@ -102,7 +102,7 @@ const orientationItems = ref<RadioGroupItem[]>([
               indicator="hidden"
               orientation="horizontal"
               default-value="white"
-              v-model="store.textColor"
+              v-model="store.orientation"
               :items="orientationItems"
               :ui="{
                 legend: 'text-default',
