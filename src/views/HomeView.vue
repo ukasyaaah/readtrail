@@ -16,7 +16,7 @@ const link = ref<ButtonProps>({
       icon="i-lucide-book-open-text"
       title="Read Trail"
       :ui="{
-        description: ' items-center mx-auto max-w-xl',
+        description: 'items-center mx-auto max-w-xl',
       }"
     >
       <template #description>

@@ -1,4 +1,7 @@
 import { defineStore } from 'pinia'
+import { useColorMode } from '@vueuse/core'
+
+const colorMode = useColorMode()
 
 export const useReadStore = defineStore('read', {
   state: () => ({
@@ -8,7 +11,8 @@ export const useReadStore = defineStore('read', {
       hour: undefined,
       minute: undefined,
     },
-    textColor: 'text-white' as 'text-black' | 'text-white',
+    textColor:
+      colorMode.value === 'dark' ? 'text-white' : ('text-black' as 'text-black' | 'text-white'),
     orientation: 'horizontal' as 'horizontal' | 'vertical',
   }),
   getters: {
@@ -31,7 +35,7 @@ export const useReadStore = defineStore('read', {
       const minutesPerPage = this.minutesPerPage
 
       if (minutesPerPage === null) {
-        return '-'
+        return '0:00'
       }
 
       const minutes = Math.floor(minutesPerPage)
